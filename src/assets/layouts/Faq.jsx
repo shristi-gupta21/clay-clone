@@ -1,22 +1,24 @@
-export const Faq = () => {
+/* eslint-disable react/prop-types */
+import React from 'react';
+ const Faq = (props) => {
     return (
         <div>
             <details
-                className="newui-disclosure [&>summary::before]:bg-center [&>summary::before]:bg-no-repeat [&>summary::before]:bg-contain [&[open]>summary]:font-semibold w-full rounded border border-gray-200 p-4 shadow-sm shadow-slate-300"
+                className="newui-disclosure font-bold w-full pr-4 py-4 md:p-4 "
             >
                 <summary
-                    className="flex cursor-pointer list-none items-center gap-3 before:inline-block before:h-6 before:w-6 before:shrink-0 before:content-[''] lg:before:h-[1.625rem] lg:before:w-[1.625rem]"
+                    className="flex cursor-pointer list-none items-center"
                 >
                     <div
-                        className="flex w-full flex-col sm:flex-row md:font-semibold md:justify-between"
+                        className="flex w-full flex-col sm:flex-row  md:justify-between"
                     >
-                        <span className="text-sm lg:text-xl">
-                            
+                        <span className="text-base lg:text-xl">
+                            {props.heading}
                         </span>
                     </div>
                 </summary>
-                <p className="pt-4 text-xs text-gd-gray-400 lg:text-base">
-
+                <p className="pt-4 text-base font-normal text-[#676d7e] lg:text-xl">
+                    {props.content}
                 </p>
             </details>
 

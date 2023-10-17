@@ -1,6 +1,6 @@
 const Hero = () => {
     return (
-        <div className="max-w-7xl mx-auto md:flex gap-11 justify-between items-center pt-16 md:pt-44 pb-20 mt-auto px-5 md:px-0">
+        <div className="max-w-7xl mx-auto md:flex gap-11 justify-between items-center pt-32 md:pt-44 pb-20 mt-auto px-5 md:px-0">
             <div className="pb-10 md:pb-0">
                 <h1 className=" text-[2.5rem] md:text-[3.15rem] -tracking-[0.1rem] md:-tracking-[0.1rem] leading-[3rem] font-semibold">Scale your most creative outbound ideas</h1>
                 <p className="pt-6 md:pt-8 pb-8 md:pb-10 text-base md:text-xl text-[#676d7e] w-[90%]">Combine 50+ data providers, real-time scraping, and AI to send 1-1 personalized campaigns that book more meetings.</p>

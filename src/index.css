@@ -34,6 +34,8 @@ body,html{
 
 #primary-menu ul {
   display: none;
+  
+
 }
 
 @media (min-width: 768px) {
@@ -50,6 +52,7 @@ body,html{
   padding-right: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  border-bottom: 1px solid #676d7e;
 }
 
 
@@ -247,3 +250,19 @@ footer li:hover{
   text-decoration: underline;
   cursor: pointer;
 }
+
+
+.newui-disclosure[open] summary {
+  transition-timing-function: height 0.5s ease-in-out;
+}
+
+.newui-disclosure[open] summary::after {
+  content: "<";
+ rotate: 90deg;
+
+}
+.newui-disclosure summary::after{
+   content:">";
+   rotate: 90deg;
+}
+    

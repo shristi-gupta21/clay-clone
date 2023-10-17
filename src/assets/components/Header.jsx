@@ -1,72 +1,22 @@
-import { useEffect } from "react";
-
 const Header = () => {
-
+    const headerStyle = {
+        display:"flex"
+      };
+    
+      
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        headerStyle.display = 'none';
+      }
     const headerjs = () => {
         const menu = document.querySelector("#primary-menu");
         const toggleMenuButton = document.querySelector("#mobile-menu-toggle");
         if (window.matchMedia("(max-width: 767px)").matches) {
             toggleMenuButton.addEventListener("click", () => {
-                if (menu.style.display === "none") {
-                    menu.style.display = "";
-                } else {
-                    menu.style.display = "none";
-                }
+                menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
             });
-
-            const buttonClassName = "pl-2 pr-4 grow flex justify-end items-center";
-            const buttonClassList = buttonClassName.split(" ");
-            const caretClassName =
-                "inline-block w-2.5 h-2.5 border-t-[3px] border-r-[3px] rounded-sm";
-            const caretClassList = caretClassName.split(" ");
-            const buttonInactiveClassList = ["rotate-[135deg]", "border-black"];
-            const buttonActiveClassList = ["-rotate-45", "border-gd-purple-500"];
-            const buttonAndLabelContainerClassName = "flex justify-between pb-2";
-
-
-            const allUls = menu.querySelectorAll("li>ul");
-
-            allUls.forEach((ul) => {
-                const buttonAndLabelContainer = document.createElement("div");
-                buttonAndLabelContainer.className = buttonAndLabelContainerClassName;
-
-                const btn = document.createElement("button");
-                btn.classList.add(...buttonClassList);
-                const caret = document.createElement("div");
-                // console.log("caret classes:", caretClassList, buttonInactiveClassList);
-                caret.classList.add(...caretClassList, ...buttonInactiveClassList);
-
-                btn.append(caret);
-
-                const menuItem = ul.parentElement.firstElementChild;
-
-                buttonAndLabelContainer.append(ul.parentElement.firstElementChild);
-                buttonAndLabelContainer.append(btn);
-
-
-                ul.parentElement.prepend(buttonAndLabelContainer);
-
-                btn.addEventListener("click", () => {
-
-                    if (ul.style.display === "block") {
-                        ul.style.display = "";
-                        caret.classList.remove(...buttonActiveClassList);
-                        caret.classList.add(...buttonInactiveClassList);
-                        menuItem.classList.remove("text-gd-purple-500", "font-bold");
-                    } else {
-                        caret.classList.add(...buttonActiveClassList);
-                        caret.classList.remove(...buttonInactiveClassList);
-                        ul.style.display = "block";
-                        menuItem.classList.add("text-gd-purple-500", "font-bold");
-                    }
-                });
-            });
-        } else {
-            menu.style.display = ""
-        }
+        } 
     }
 
-    useEffect(() => { headerjs() }, [])
     return (
         <div>
             <header
@@ -82,80 +32,42 @@ const Header = () => {
                             alt="Clay"
                         />
                     </a>
-                    <ul id="primary-menu" className="flex gap-12 text-sm" style={{ display: "none", backgroundColor: "#f4f7fd" }}>
+                    <ul id="primary-menu" className="md:flex gap-8 text-sm " style={headerStyle}  >
                         <li>
                             <a href="/">Features</a>
                             <ul>
                                 <li>
-                                    <a href="/study-abroad-education-loans">Abroad Education Loan Overview</a>
+                                    <a href="/">Abroad Education Loan Overview</a>
+                                </li>
+                              
+                                <li>
+                                    <a href="/">Loan Referral Programme</a>
                                 </li>
                                 <li>
-                                    <a href="/">Our Lending Partners?</a>
-                                    <ul>
-                                        <li><a href="/sbi-education-loan">SBI</a></li>
-                                        <li><a href="/bob-education-loan">BOB</a></li>
-                                        <li><a href="/axis-education-loan">Axis</a></li>
-                                        <li><a href="/icici-education-loan">ICICI</a></li>
-                                        <li><a href="/incred-education-loan">Incred</a></li>
-                                        <li><a href="/avanse-education-loan">Avanse</a></li>
-                                        <li><a href="/auxilo-education-loan">Auxilo</a></li>
-                                        <li><a href="/idfc-education-loan">IDFC</a></li>
-                                        <li><a href="/ubi-education-loan">UBI</a></li>
-                                        <li><a href="/prodigy-finance-education-loan">Prodigy</a></li>
-                                        <li><a href="/mpower-financing-education-loan">MPower</a></li>
-                                        <li><a href="/hdfc-credila-education-loan">HDFC Credila</a></li>
-                                    </ul>
+                                    <a href="/">Abroad Education Loan Tools</a>
+                                    
                                 </li>
                                 <li>
-                                    <a href="/loan-referral-programme">Loan Referral Programme</a>
-                                </li>
-                                <li>
-                                    <a href="/404">Abroad Education Loan Tools</a>
-                                    <ul>
-                                        <li><a href="/education-loan-emi-calculator">Education Loan EMI Calculator</a></li>
-                                        <li><a href="/404">Compare Loan - USD Vs. INR</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/404">Loan for Upskilling Courses</a>
+                                    <a href="/">Loan for Upskilling Courses</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="/about">Resouces</a>
+                            <a href="/">Resources</a>
                             <ul>
                                 <li>
-                                    <a href="/study-abroad-education-loans">Abroad Education Loan Overview</a>
+                                    <a href="/">Learn Clay Tutorials</a>
                                 </li>
                                 <li>
-                                    <a href="/">Our Lending Partners?</a>
-                                    <ul>
-                                        <li><a href="/sbi-education-loan">SBI</a></li>
-                                        <li><a href="/bob-education-loan">BOB</a></li>
-                                        <li><a href="/axis-education-loan">Axis</a></li>
-                                        <li><a href="/icici-education-loan">ICICI</a></li>
-                                        <li><a href="/incred-education-loan">Incred</a></li>
-                                        <li><a href="/avanse-education-loan">Avanse</a></li>
-                                        <li><a href="/auxilo-education-loan">Auxilo</a></li>
-                                        <li><a href="/idfc-education-loan">IDFC</a></li>
-                                        <li><a href="/ubi-education-loan">UBI</a></li>
-                                        <li><a href="/prodigy-finance-education-loan">Prodigy</a></li>
-                                        <li><a href="/mpower-financing-education-loan">MPower</a></li>
-                                        <li><a href="/hdfc-credila-education-loan">HDFC Credila</a></li>
-                                    </ul>
+                                    <a href="/">Templates</a>
+                                    
                                 </li>
                                 <li>
-                                    <a href="/loan-referral-programme">Loan Referral Programme</a>
+                                    <a href="/">Blog</a>
                                 </li>
                                 <li>
-                                    <a href="/404">Abroad Education Loan Tools</a>
-                                    <ul>
-                                        <li><a href="/education-loan-emi-calculator">Education Loan EMI Calculator</a></li>
-                                        <li><a href="/404">Compare Loan - USD Vs. INR</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/404">Loan for Upskilling Courses</a>
+                                    <a href="/">Integrations</a>
+                                    
                                 </li>
                             </ul>
                         </li>
@@ -163,130 +75,45 @@ const Header = () => {
                             <a>Community</a>
                             <ul>
                                 <li>
-                                    <a href="/study-abroad-education-loans">Abroad Education Loan Overview</a>
+                                    <a href="/">Get Support on Slack</a>
                                 </li>
                                 <li>
-                                    <a href="/">Our Lending Partners?</a>
-                                    <ul>
-                                        <li><a href="/sbi-education-loan">SBI</a></li>
-                                        <li><a href="/bob-education-loan">BOB</a></li>
-                                        <li><a href="/axis-education-loan">Axis</a></li>
-                                        <li><a href="/icici-education-loan">ICICI</a></li>
-                                        <li><a href="/incred-education-loan">Incred</a></li>
-                                        <li><a href="/avanse-education-loan">Avanse</a></li>
-                                        <li><a href="/auxilo-education-loan">Auxilo</a></li>
-                                        <li><a href="/idfc-education-loan">IDFC</a></li>
-                                        <li><a href="/ubi-education-loan">UBI</a></li>
-                                        <li><a href="/prodigy-finance-education-loan">Prodigy</a></li>
-                                        <li><a href="/mpower-financing-education-loan">MPower</a></li>
-                                        <li><a href="/hdfc-credila-education-loan">HDFC Credila</a></li>
-                                    </ul>
+                                    <a href="/">Wall of love</a>
+                                   
                                 </li>
                                 <li>
-                                    <a href="/loan-referral-programme">Loan Referral Programme</a>
+                                    <a href="/">Hire an Expert</a>
                                 </li>
-                                <li>
-                                    <a href="/404">Abroad Education Loan Tools</a>
-                                    <ul>
-                                        <li><a href="/education-loan-emi-calculator">Education Loan EMI Calculator</a></li>
-                                        <li><a href="/404">Compare Loan - USD Vs. INR</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/404">Loan for Upskilling Courses</a>
-                                </li>
+                               
                             </ul>
                         </li>
                         <li>
-                            <a href="/newui_study_abroad">Company</a>
+                            <a href="/">Company</a>
                             <ul>
-                                <li><a href="/newui_scholarship">Scholarships</a></li>
+                                <li><a href="/">About us</a></li>
                                 <li>
-                                    <a href="/newui_country_landing">Countries</a>
-                                    <ul>
-                                        <li>
-                                            <a href="/newui_country_individual">USA</a>
-                                        </li>
-                                        <li>
-                                            <a href="/404">Canada</a>
-                                        </li>
-                                        <li>
-                                            <a href="/404">Germany</a>
-                                        </li>
-                                        <li>
-                                            <a href="/404">Australia</a>
-                                        </li>
-                                        <li>
-                                            <a href="/404">United Kingdom</a>
-                                        </li>
-                                        <li>
-                                            <a href="/404">New Zealand</a>
-                                        </li>
-                                        <li>
-                                            <a href="/404">Ireland</a>
-                                        </li>
-                                        <li>
-                                            <a href="/404">France</a>
-                                        </li>
-                                    </ul>
+                                    <a href="/">Careers</a>
+                                  
                                 </li>
-                                <li><a href="/stem/masters-courses">Courses</a></li>
-                                <li>
-                                    <a href="/newui_exams_home">Exams</a>
-                                    <ul>
-                                        <li><a href="newui_ielts_individual">IELTS</a></li>
-                                        <li><a href="/404">TOEFL</a></li>
-                                        <li><a href="/404">GRE</a></li>
-                                        <li><a href="/404">GMAT</a></li>
-                                        <li><a href="/404">SAT</a></li>
-                                        <li><a href="/404">PTE</a></li>
-                                        <li><a href="/404">ACT</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/404">Complete Study Abroad Guide</a>
-                                </li>
-                                <li>
-                                    <a href="/404">Services</a>
-                                    <ul>
-                                        <li><a href="/404">USA Credit Card</a></li>
-                                        <li><a href="/404">Accomodation</a></li>
-                                        <li><a href="/404">Visa Counselling</a></li>
-                                        <li><a href="/404">Travel/Forex Card</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/404">Tools</a>
-                                    <ul>
-                                        <li><a href="/newui_admit_input">Admit Predictor</a></li>
-                                        <li><a href="/404">SOP Review</a></li>
-                                        <li><a href="/404">University Compare</a></li>
-                                        <li><a href="/404">Grade Converter</a></li>
-                                        <li><a href="/404">Estimate Future Earnings</a></li>
-                                    </ul>
-                                </li>
+                               
+                                
                             </ul>
                         </li>
 
-                        <li><a href="/404">Pricing</a>
-                            <ul>
-                                <li><a href="/newui_event_home">Events</a></li>
-                                <li><a href="/blogs">Blogs</a></li>
-                                <li><a href="https://discussions.gyandhan.com/">Discussion Forum</a></li>
-                            </ul>
+                        <li><a href="/">Pricing</a>
                         </li>
 
 
                     </ul>
                     <div className="flex items-center md:hidden">
                         <a
-                            className="sign-up-btn rounded-full font-semibold flex gap-2 px-5 py-2 bg-black text-white cursor-pointer hover:bg-[#9170e6]"
+                            className="sign-up-btn rounded-full text-[0.9rem] font-semibold flex gap-1 px-5 py-2 bg-[#1d2026] text-white cursor-pointer hover:bg-[#9170e6]"
                         >
                             <div>Sign Up </div>
                             <div><img src={window.location.origin + "/images/up-arrow.svg"} /></div>
                         </a>
-                        <button id="mobile-menu-toggle" className="ml-4 h-fit w-fit p-2 shadow">
-                            <img src="" />
+                        <button id="mobile-menu-toggle" className="ml-4" onClick={headerjs}>
+                            <img src={window.location.origin+"/images/hamburger.svg"} />
                         </button>
                     </div>
                     <div className="md:flex font-medium text-xs lg:text-[0.9375rem] hidden">
@@ -295,7 +122,7 @@ const Header = () => {
                         >Log in</a
                         >
                         <a
-                            className="sign-up-btn rounded-full font-semibold flex gap-2 px-5 py-2 bg-black text-white cursor-pointer hover:bg-[#9170e6]"
+                            className="sign-up-btn rounded-full font-semibold flex gap-2 px-5 py-2 bg-[#1d2026] text-white cursor-pointer hover:bg-[#9170e6]"
                         >
                             <div>Sign Up </div>
                             <div><img src={window.location.origin + "/images/up-arrow.svg"} /></div>
