@@ -16,8 +16,6 @@ body,html{
   max-height: 80vh;
   width: 100%;
   overflow-y: auto;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
@@ -48,20 +46,12 @@ body,html{
   position: relative;
   height: 100%;
   align-items: center;
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
 
-#primary-menu > li:hover::after {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(78 60 134 / var(--tw-bg-opacity));
-}
 
 @media (min-width: 768px) {
   #primary-menu > li {
@@ -88,16 +78,15 @@ body,html{
   }
 }
 
-#primary-menu > li:hover > a {
-  --tw-shadow-color: #4e3c86;
-  --tw-shadow: var(--tw-shadow-colored);
-  text-shadow: 1px 0.5px 0 var(--tw-shadow-color);
+#primary-menu > li{
+  padding: 20px 10px;
 }
-
 @media (min-width: 768px) {
   #primary-menu > li:hover > a {
     --tw-text-opacity: 1;
     color: rgb(78 60 134 / var(--tw-text-opacity));
+    
+    background-color: #e7e8ec;
   }
 }
 
@@ -126,22 +115,19 @@ body,html{
 @media (min-width: 768px) {
   #primary-menu > li > ul {
     position: absolute;
-    left: 50%;
+    left: 100%;
     top: 100%;
     display: block;
     height: 0px;
     width: -moz-max-content;
     width: max-content;
     min-width: 100%;
-    --tw-translate-x: -50%;
+    --tw-translate-x: -30%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y))
       rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
       scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     overflow: hidden;
-    --tw-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
-    --tw-shadow-colored: 0px 4px 14px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+   
   }
 }
 
@@ -162,14 +148,13 @@ body,html{
     font-size: 1rem;
     line-height: 1.5rem;
     --tw-text-opacity: 1;
-    color: rgb(78 60 134 / var(--tw-text-opacity));
   }
 
   #primary-menu > li > ul > li:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(78 60 134 / var(--tw-bg-opacity));
+    background-color: #ebf6ee;
+    
     --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
     --tw-shadow-color: #fff;
     --tw-shadow: var(--tw-shadow-colored);
     text-shadow: 1px 0.5px 0 var(--tw-shadow-color);
@@ -256,4 +241,9 @@ body,html{
   transform: translate3d(6e-5em, 6e-5em, 0px) scale3d(1, 1, 1) rotateX(0deg)
     rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
+}
+
+footer li:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }

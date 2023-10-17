@@ -70,7 +70,7 @@ const Header = () => {
     return (
         <div>
             <header
-                className="sticky md:fixed px-5 md:px-0 inset-x-4 xl:inset-x-0 border border-b-1 top-0 md:block z-50 bg-[#f4f7fd]"
+                className="fixed md:px-0 inset-x-4 xl:inset-x-0  border-b-1 top-0 block z-50 bg-[#f4f7fd]"
             >
                 <nav
                     className="relative flex items-center justify-between h-20  py-2 md:py-0 divider border-b md:border-b-0 shadow-gd-purple  md:px-10"
@@ -85,9 +85,79 @@ const Header = () => {
                     <ul id="primary-menu" className="flex gap-12 text-sm" style={{ display: "none", backgroundColor: "#f4f7fd" }}>
                         <li>
                             <a href="/">Features</a>
+                            <ul>
+                                <li>
+                                    <a href="/study-abroad-education-loans">Abroad Education Loan Overview</a>
+                                </li>
+                                <li>
+                                    <a href="/">Our Lending Partners?</a>
+                                    <ul>
+                                        <li><a href="/sbi-education-loan">SBI</a></li>
+                                        <li><a href="/bob-education-loan">BOB</a></li>
+                                        <li><a href="/axis-education-loan">Axis</a></li>
+                                        <li><a href="/icici-education-loan">ICICI</a></li>
+                                        <li><a href="/incred-education-loan">Incred</a></li>
+                                        <li><a href="/avanse-education-loan">Avanse</a></li>
+                                        <li><a href="/auxilo-education-loan">Auxilo</a></li>
+                                        <li><a href="/idfc-education-loan">IDFC</a></li>
+                                        <li><a href="/ubi-education-loan">UBI</a></li>
+                                        <li><a href="/prodigy-finance-education-loan">Prodigy</a></li>
+                                        <li><a href="/mpower-financing-education-loan">MPower</a></li>
+                                        <li><a href="/hdfc-credila-education-loan">HDFC Credila</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/loan-referral-programme">Loan Referral Programme</a>
+                                </li>
+                                <li>
+                                    <a href="/404">Abroad Education Loan Tools</a>
+                                    <ul>
+                                        <li><a href="/education-loan-emi-calculator">Education Loan EMI Calculator</a></li>
+                                        <li><a href="/404">Compare Loan - USD Vs. INR</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/404">Loan for Upskilling Courses</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="/about">Resouces</a>
+                            <ul>
+                                <li>
+                                    <a href="/study-abroad-education-loans">Abroad Education Loan Overview</a>
+                                </li>
+                                <li>
+                                    <a href="/">Our Lending Partners?</a>
+                                    <ul>
+                                        <li><a href="/sbi-education-loan">SBI</a></li>
+                                        <li><a href="/bob-education-loan">BOB</a></li>
+                                        <li><a href="/axis-education-loan">Axis</a></li>
+                                        <li><a href="/icici-education-loan">ICICI</a></li>
+                                        <li><a href="/incred-education-loan">Incred</a></li>
+                                        <li><a href="/avanse-education-loan">Avanse</a></li>
+                                        <li><a href="/auxilo-education-loan">Auxilo</a></li>
+                                        <li><a href="/idfc-education-loan">IDFC</a></li>
+                                        <li><a href="/ubi-education-loan">UBI</a></li>
+                                        <li><a href="/prodigy-finance-education-loan">Prodigy</a></li>
+                                        <li><a href="/mpower-financing-education-loan">MPower</a></li>
+                                        <li><a href="/hdfc-credila-education-loan">HDFC Credila</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/loan-referral-programme">Loan Referral Programme</a>
+                                </li>
+                                <li>
+                                    <a href="/404">Abroad Education Loan Tools</a>
+                                    <ul>
+                                        <li><a href="/education-loan-emi-calculator">Education Loan EMI Calculator</a></li>
+                                        <li><a href="/404">Compare Loan - USD Vs. INR</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/404">Loan for Upskilling Courses</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a>Community</a>
