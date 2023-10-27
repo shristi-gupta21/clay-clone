@@ -1,12 +1,10 @@
 const Header = () => {
     const headerStyle = {
         display:"flex"
-      };
-    
-      
-      if (window.matchMedia('(max-width: 767px)').matches) {
-        headerStyle.display = 'none';
-      }
+    };
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      headerStyle.display = 'none';
+    }
     const headerjs = () => {
         const menu = document.querySelector("#primary-menu");
         const toggleMenuButton = document.querySelector("#mobile-menu-toggle");
@@ -20,7 +18,7 @@ const Header = () => {
     return (
         <div>
             <header
-                className="fixed md:px-0 inset-x-4 xl:inset-x-0  border-b-1 top-0 block z-50 bg-[#f4f7fd]"
+                className=" font-sohneBuch fixed md:px-0 inset-x-4 xl:inset-x-0  border-b-1 top-0 block z-50 bg-clay-blue-100 border-b"
             >
                 <nav
                     className="relative flex items-center justify-between h-20  py-2 md:py-0 divider border-b md:border-b-0 shadow-gd-purple  md:px-10"
@@ -105,9 +103,9 @@ const Header = () => {
 
 
                     </ul>
-                    <div className="flex items-center md:hidden">
+                    <div className="flex items-center md:hidden font-sohneKraftig">
                         <a
-                            className="sign-up-btn rounded-full text-[0.9rem] font-semibold flex gap-1 px-5 py-2 bg-[#1d2026] text-white cursor-pointer hover:bg-[#9170e6]"
+                            className="sign-up-btn rounded-full text-[0.9rem] flex gap-1 px-5 py-2.5 bg-clay-black text-white cursor-pointer hover:bg-clay-purple-200"
                         >
                             <div>Sign Up </div>
                             <div><img src={window.location.origin + "/images/up-arrow.svg"} /></div>
@@ -116,13 +114,13 @@ const Header = () => {
                             <img src={window.location.origin+"/images/hamburger.svg"} />
                         </button>
                     </div>
-                    <div className="md:flex font-medium text-xs lg:text-[0.9375rem] hidden">
+                    <div className="md:flex font-sohneKraftig text-xs lg:text-[0.9375rem] hidden">
                         <a
-                            className="px-3 py-1 lg:px-6 lg:py-2 hover:text-[#9170e6] cursor-pointer"
+                            className="px-3 py-1 lg:px-6 lg:py-2 hover:text-clay-purple-200 cursor-pointer"
                         >Log in</a
                         >
                         <a
-                            className="sign-up-btn rounded-full font-semibold flex gap-2 px-5 py-2 bg-[#1d2026] text-white cursor-pointer hover:bg-[#9170e6]"
+                            className="sign-up-btn rounded-full  flex gap-1 px-5 py-2.5 bg-clay-black text-white cursor-pointer hover:bg-clay-purple-200"
                         >
                             <div>Sign Up </div>
                             <div><img src={window.location.origin + "/images/up-arrow.svg"} /></div>

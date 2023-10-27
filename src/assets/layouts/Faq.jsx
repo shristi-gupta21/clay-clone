@@ -17,7 +17,7 @@ import React from 'react';
                         </span>
                     </div>
                 </summary>
-                <p className="pt-4 text-base font-normal text-[#676d7e] lg:text-xl">
+                <p className="pt-4 text-base font-normal text-clay-blue-200 lg:text-xl">
                     {props.content}
                 </p>
             </details>
