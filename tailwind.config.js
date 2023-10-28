@@ -25,6 +25,9 @@ export default {
         'clay-purple-200':"#9170e6",
         'clay-purple-500':"#825ddc",
         'clay-red-100':"#e86558"
+      },
+      fontSize:{
+        'xb':"15px"
       }
     },
   },

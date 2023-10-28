@@ -114,15 +114,15 @@ const Header = () => {
                             <img src={window.location.origin+"/images/hamburger.svg"} />
                         </button>
                     </div>
-                    <div className="md:flex font-sohneKraftig text-xs lg:text-[0.9375rem] hidden">
+                    <div className="md:flex font-sohneKraftig items-center text-xs lg:text-xb hidden">
                         <a
                             className="px-3 py-1 lg:px-6 lg:py-2 hover:text-clay-purple-200 cursor-pointer"
                         >Log in</a
                         >
                         <a
-                            className="sign-up-btn rounded-full  flex gap-1 px-5 py-2.5 bg-clay-black text-white cursor-pointer hover:bg-clay-purple-200"
+                            className="sign-up-btn rounded-full text-xb items-center flex gap-1 px-5 py-2.5 bg-clay-black text-white cursor-pointer hover:bg-clay-purple-200"
                         >
-                            <div>Sign Up </div>
+                            <div>Sign up </div>
                             <div><img src={window.location.origin + "/images/up-arrow.svg"} /></div>
                         </a>
                     </div>
