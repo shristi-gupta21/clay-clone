@@ -1,16 +1,16 @@
 import FindJobs from "./FindJobs";
-import Testimonial from "./Testimonial";
 import TrustedTeams from "./TrustedTeams";
 import WriteEmail from "./WriteEmail";
 import DreamCampaigns from "./DreamCampaigns";
 import Faq from "../layouts/Faq";
-const Body = () => {
+import Testimonials from "./Testimonials";
 
+const Body = () => {
     return (
         <>
             <TrustedTeams />
             <FindJobs />
-            <Testimonial />
+           <Testimonials/>
             <WriteEmail />
             <section className=" max-w-2xl mx-auto my-20 px-5 md:px-0">
                 <h1 className="md:flex pb-10 md:pb-20 justify-center text-4xl md:text-5xl font-semibold">FAQ</h1>
@@ -24,9 +24,7 @@ const Body = () => {
                 <hr className="my-5"/>
             </section>
             <DreamCampaigns />
-
         </>
-
     )
 }
 
