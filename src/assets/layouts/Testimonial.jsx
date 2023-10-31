@@ -15,7 +15,7 @@ const Testimonial = ({ slides }) => {
         <div className="slider">
             <div className="slides-container" >
                 <div className={`slide max-w-6xl mx-auto px-5 md:px-0 rounded `}>
-                    <div className="bg-white p-8 md:p-7  border border-b-[0.625rem] mb-20 md:mb-0 flex justify-between items-start">
+                    <div className="bg-white p-8 md:p-7  border border-b-[0.625rem] mb-16 md:h-56 md:mb-0 flex justify-between items-start">
                         {slides.map((slide, index) => (
                             <>
                                 <div className={`${currentSlide !== index ? 'hidden' : 'block'}`} key={index}>
