@@ -23,6 +23,7 @@ const Body = () => {
                 <Faq heading={"How does AI & GPT-4 work in Clay?"} content={"Your AI messaging is only as powerful as the data that powers it. Clay leverages GPT-4 to help you automate research on leads and write 1:1 personalized campaigns. You can even train the AI model to write like you."} />
                 <hr className="my-5"/>
             </section>
+            
             <DreamCampaigns />
         </>
     )

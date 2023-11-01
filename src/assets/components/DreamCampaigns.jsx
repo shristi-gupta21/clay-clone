@@ -1,5 +1,4 @@
-
-export const DreamCampaigns = () => {
+const DreamCampaigns = () => {
     return (
         <section className=" max-w-6xl text-center mx-auto px-5 md:px-0 md:py-10 text-[2rem] md:text-5xl font-semibold">
             <p>Start molding your</p>
@@ -12,7 +11,10 @@ export const DreamCampaigns = () => {
                 <span className="text-clay-sand">ig</span>
                 <span className="text-clay-yellow">ns</span>
             </div>
-
+            <div className="flex items-center justify-center">
+                <img src={window.location.origin + "/images/button.svg"} alt="" className="h-11" />
+                <img src={window.location.origin + "/images/button.svg"} alt="" className="text-white h-11" />
+            </div>
             <div className="relative flex flex-col items-center m y-20">
                 <img src={window.location.origin + "/images/stones.png"} className="translate-y-[50%]" />
                 <div className="bg-white p-6 z-10 relative">
