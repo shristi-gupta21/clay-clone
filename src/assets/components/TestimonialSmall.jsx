@@ -1,9 +1,8 @@
-import Testimonial from '../layouts/Testimonial'
+import Testimonial from "../layouts/Testimonial";
 
-const Testimonials = () => {
+const TestimonialSmall = () => {
     return (
         <section className="testimonials">
-
             <Testimonial slides={[
                 {
                     img_path: "/images/recruit-qrew.jpeg",
@@ -37,9 +36,8 @@ const Testimonials = () => {
                     name: "Mehak Batra, Founder",
                     
                 },
-            ]} />
+            ]} small={true} />
         </section>
     )
 }
-
-export default Testimonials
+export default TestimonialSmall;
