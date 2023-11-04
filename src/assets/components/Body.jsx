@@ -4,7 +4,7 @@ import WriteEmail from "./WriteEmail";
 import DreamCampaigns from "./DreamCampaigns";
 import Testimonials from "./Testimonials";
 import Faqs from "./Faqs";
-import TestimonialSmall from "./TestimonialSmall";
+import TestimonialSmalls from "./TestimonialSmalls";
 
 const Body = () => {
     return (
@@ -13,7 +13,7 @@ const Body = () => {
             <FindJobs />
             <Testimonials />
             <WriteEmail />
-            <TestimonialSmall/>
+            <TestimonialSmalls/>
             <Faqs/>
             <DreamCampaigns />
         </>
